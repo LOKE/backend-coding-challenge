@@ -1,31 +1,31 @@
-# Coveo Backend Coding Challenge
-(inspired by https://github.com/busbud/coding-challenge-backend-c)
+# LOKE Backend Coding Challenge
+Based on https://github.com/coveo/backend-coding-challenge. We've cut it down a bit to reduce the time required.
 
-## Requirements
+## Base Requirements
 
-Design an API endpoint that provides auto-complete suggestions for large cities.
+Design an API endpoint that provides auto-complete suggestions for large cities in the US and Canada. _See data folder for TSV containing cities. The original data comes from Geonames. See link below._ 
 
 - The endpoint is exposed at `/suggestions`
 - The partial (or complete) search term is passed as a querystring parameter `q`
-- The caller's location can optionally be supplied via querystring parameters `latitude` and `longitude` to help improve relative scores
 - The endpoint returns a JSON response with an array of scored suggested matches
     - The suggestions are sorted by descending score
     - Each suggestion has a score between 0 and 1 (inclusive) indicating confidence in the suggestion (1 is most confident)
     - Each suggestion has a name which can be used to disambiguate between similarly named locations
     - Each suggestion has a latitude and longitude
+    
+## Bonus Requirements
 
-## "The rules"
+- The caller's location can optionally be supplied via querystring parameters `latitude` and `longitude` to help improve relative scores
 
-- *You can use the language and technology of your choosing.* It's OK to try something new (tell us if you do), but feel free to use something you're comfortable with. We don't care if you use something we don't; the goal here is not to validate your knowledge of a particular technology.
-- End result should be deployed on a public Cloud (Heroku, AWS etc. all have free tiers you can use).
-
-## Advices
+## The Rules / Advice
 
 - **Try to design and implement your solution as you would do for real production code**. Show us how you create clean, maintainable code that does awesome stuff. Build something that we'd be happy to contribute to. This is not a programming contest where dirty hacks win the game.
-- Feel free to add more features! Really, we're curious about what you can think of. We'd expect the same if you worked with us.
-- Documentation and maintainability is a plus.
-- Don't you forget those unit tests.
-- We don’t want to know if you can do exactly as asked (or everybody would have the same result). We want to know what **you** bring to the table when working on a project, what is your secret sauce. More features? Best solution? Thinking outside the box?
+- You only need to spend a couple of hours. That should be enough time for you to demonstrate your coding style and approach to problem solving.
+- _Don't worry if you don't finish everything in that time, as long as it effectively demonstrates you're approach and style._ Stub out functionality and use comments to describe the changes/improvements you were intending to make.
+- Try to include at least one test to demonstrate the tools you use, and how your approach to writing tests.
+- Stub out or describe what other tests you would include with more time. 
+- Documentation and maintainability is a plus. If short on time, describe how you would document the service/API in a README.md. How would you make the documentation available? What tools would you use?
+- Ideas for more features or improvements? Feel free to implement them, or describe them in a README.md.
 
 ## Sample responses
 
@@ -79,8 +79,3 @@ These responses are meant to provide guidance. The exact values can vary based o
 ## References
 
 - Geonames provides city lists Canada and the USA http://download.geonames.org/export/dump/readme.txt
-
-## Getting Started
-
-Begin by forking this repo and cloning your fork. GitHub has apps for [Mac](http://mac.github.com/) and
-[Windows](http://windows.github.com/) that make this easier.
