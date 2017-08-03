@@ -1,9 +1,9 @@
 # LOKE Backend Coding Challenge
 Based on https://github.com/coveo/backend-coding-challenge. We've cut it down a bit to reduce the time required.
 
-## Base Requirements
+## Requirements
 
-Design an API endpoint that provides auto-complete suggestions for large cities in the US and Canada. _See data folder for TSV containing cities. The original data comes from Geonames. See link below._ 
+Design an API endpoint that provides auto-complete suggestions for large cities in the US and Canada. _See data folder for a TSV file containing cities. The original data comes from Geonames. See link below in references._ 
 
 - The endpoint is exposed at `/suggestions`
 - The partial (or complete) search term is passed as a querystring parameter `q`
@@ -12,7 +12,8 @@ Design an API endpoint that provides auto-complete suggestions for large cities 
     - Each suggestion has a score between 0 and 1 (inclusive) indicating confidence in the suggestion (1 is most confident)
     - Each suggestion has a name which can be used to disambiguate between similarly named locations
     - Each suggestion has a latitude and longitude
-    
+- Use Node.js up to version 8.
+
 ## Bonus Requirements
 
 - The caller's location can optionally be supplied via querystring parameters `latitude` and `longitude` to help improve relative scores
@@ -26,6 +27,7 @@ Design an API endpoint that provides auto-complete suggestions for large cities 
 - Stub out or describe what other tests you would include with more time. 
 - Documentation and maintainability is a plus. If short on time, describe how you would document the service/API in a README.md. How would you make the documentation available? What tools would you use?
 - Ideas for more features or improvements? Feel free to implement them, or describe them in a README.md.
+- Publish your solution to Github or another source control system you can share with us.
 
 ## Sample responses
 
